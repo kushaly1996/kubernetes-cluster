@@ -1,0 +1,9 @@
+RESOURCE_GROUP=rg-aks-kubenet-demo
+CLUSTER_NAME=aks-kubenet-cluster
+SP_ID=5bbd8820-66ac-4716-9e0e-2a8b749945b6
+
+# Give it "Azure Kubernetes Service RBAC Cluster Admin" role
+az role assignment create \
+  --assignee $SP_ID \
+  --role "Azure Kubernetes Service RBAC Cluster Admin" \
+  --scope $(az aks show -g $RESOURCE_GROUP -n $CLUSTER_NAME --query id -o tsv)

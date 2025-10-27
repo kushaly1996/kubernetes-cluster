@@ -1,0 +1,71 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.3",
+  "serial": 210,
+  "lineage": "da616196-2e88-8141-0f40-08e15588ed68",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "github_repository",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "allow_auto_merge": false,
+            "allow_merge_commit": true,
+            "allow_rebase_merge": true,
+            "allow_squash_merge": true,
+            "allow_update_branch": false,
+            "archive_on_destroy": null,
+            "archived": false,
+            "auto_init": true,
+            "default_branch": "main",
+            "delete_branch_on_merge": false,
+            "description": "flux-repo",
+            "etag": "W/\"8df015c26712b4bca9f0c84e07c9225f2d62e99427d15a6aae6cbc771eb04460\"",
+            "full_name": "kushaly1996/flux-repo",
+            "git_clone_url": "git://github.com/kushaly1996/flux-repo.git",
+            "gitignore_template": null,
+            "has_discussions": false,
+            "has_downloads": false,
+            "has_issues": false,
+            "has_projects": false,
+            "has_wiki": false,
+            "homepage_url": "",
+            "html_url": "https://github.com/kushaly1996/flux-repo",
+            "http_clone_url": "https://github.com/kushaly1996/flux-repo.git",
+            "id": "flux-repo",
+            "ignore_vulnerability_alerts_during_read": null,
+            "is_template": false,
+            "license_template": null,
+            "merge_commit_message": "PR_TITLE",
+            "merge_commit_title": "MERGE_MESSAGE",
+            "name": "flux-repo",
+            "node_id": "R_kgDOQAWypw",
+            "pages": [],
+            "primary_language": "",
+            "private": true,
+            "repo_id": 1074115239,
+            "security_and_analysis": [],
+            "squash_merge_commit_message": "COMMIT_MESSAGES",
+            "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+            "ssh_clone_url": "git@github.com:kushaly1996/flux-repo.git",
+            "svn_url": "https://github.com/kushaly1996/flux-repo",
+            "template": [],
+            "topics": [],
+            "visibility": "private",
+            "vulnerability_alerts": false,
+            "web_commit_signoff_required": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
