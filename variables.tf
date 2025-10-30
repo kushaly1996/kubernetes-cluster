@@ -97,3 +97,9 @@ variable "flux_additional_sources" {
   }))
   default = {}
 }
+
+variable "storage_account_name" {
+  description = "The name of the storage account for Velero backups (must be globally unique and lowercase)."
+  type        = string
+  default     = "kushalvelerobackup" # Change this to a unique name
+}

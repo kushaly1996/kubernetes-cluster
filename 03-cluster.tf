@@ -1,9 +1,9 @@
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                    = var.cluster_name
-  location                = azurerm_resource_group.rg.location
-  resource_group_name     = azurerm_resource_group.rg.name
-  dns_prefix              = var.cluster_name
-  kubernetes_version      = var.kubernetes_version
+  name                = var.cluster_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  dns_prefix          = var.cluster_name
+  kubernetes_version  = var.kubernetes_version
 
   default_node_pool {
     name           = "systempool"
@@ -16,7 +16,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     type         = "UserAssigned"
     identity_ids = [azurerm_user_assigned_identity.externaldns.id]
   }
-  oidc_issuer_enabled = true
+  oidc_issuer_enabled       = true
   workload_identity_enabled = true
 
   lifecycle {
