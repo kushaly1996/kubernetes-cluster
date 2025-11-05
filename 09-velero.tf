@@ -26,8 +26,13 @@ resource "azurerm_federated_identity_credential" "velero" {
   subject             = "system:serviceaccount:velero:velero"
   audience            = ["api://AzureADTokenExchange"]
 }
+resource "azurerm_role_assignment" "velero_storage_account_role" {
+  scope                = azurerm_storage_account.velero_sa.id
+  role_definition_name = "Storage Account Contributor"
+  principal_id         = azurerm_user_assigned_identity.velero_uami.principal_id
+}
 
-resource "azurerm_role_assignment" "velero_storage_role" {
+resource "azurerm_role_assignment" "velero_storage_account_blob_role" {
   scope                = azurerm_storage_account.velero_sa.id
   role_definition_name = "Storage Blob Data Contributor"
   principal_id         = azurerm_user_assigned_identity.velero_uami.principal_id
